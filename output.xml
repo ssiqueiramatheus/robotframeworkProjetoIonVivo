@@ -1,0 +1,991 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.10.0 on win32)" generated="20220215 16:46:05.937" rpa="false" schemaversion="2">
+<suite id="s1" name="AndroidIonVivo" source="C:\ProjetosRobot\Itau\androidIonVivo\AndroidIonVivo.robot">
+<test id="s1-t1" name="Caso de teste 01:Login">
+<kw name="Abrir aplicativo" library="ResourceAndroidIonVivo">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://10.100.9.90:4741/wd/hub</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=RX8R3039DTT</arg>
+<arg>udid=RX8R3039DTT</arg>
+<arg>systemPort= 8123</arg>
+<arg>appPackage=com.itau.investimentos</arg>
+<arg>appActivity=com.itau.investimentos.launcher.LauncherActivity</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20220215 16:46:06.103" endtime="20220215 16:46:13.260"/>
+</kw>
+<status status="PASS" starttime="20220215 16:46:06.103" endtime="20220215 16:46:13.260"/>
+</kw>
+<kw name="Entrando na tela de Login" library="ResourceAndroidIonVivo">
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220215 16:46:23.261" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20220215 16:46:13.260" endtime="20220215 16:46:23.262"/>
+</kw>
+<kw name="Get Matching Xpath Count" library="AppiumLibrary">
+<var>${NUMERO}</var>
+<arg>//android.widget.ImageButton[@content-desc="Fechar"]</arg>
+<doc>Returns number of elements matching ``xpath``</doc>
+<msg timestamp="20220215 16:46:26.483" level="INFO">${NUMERO} = 1</msg>
+<status status="PASS" starttime="20220215 16:46:23.262" endtime="20220215 16:46:26.483"/>
+</kw>
+<if>
+<branch type="IF" condition="${NUMERO} &gt; 0">
+<kw name="Click Element" library="AppiumLibrary">
+<arg>//android.widget.ImageButton[@content-desc="Fechar"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220215 16:46:26.483" level="INFO">Clicking element '//android.widget.ImageButton[@content-desc="Fechar"]'.</msg>
+<status status="PASS" starttime="20220215 16:46:26.483" endtime="20220215 16:46:47.879"/>
+</kw>
+<status status="PASS" starttime="20220215 16:46:26.483" endtime="20220215 16:46:47.879"/>
+</branch>
+<status status="PASS" starttime="20220215 16:46:26.483" endtime="20220215 16:46:47.879"/>
+</if>
+<kw name="Get Matching Xpath Count" library="AppiumLibrary">
+<var>${ESQUECERAGENCIAECONTA}</var>
+<arg>//android.widget.Button[@text='Olá, Leandro']</arg>
+<doc>Returns number of elements matching ``xpath``</doc>
+<msg timestamp="20220215 16:46:48.314" level="INFO">${ESQUECERAGENCIAECONTA} = 0</msg>
+<status status="PASS" starttime="20220215 16:46:47.879" endtime="20220215 16:46:48.314"/>
+</kw>
+<if>
+<branch type="IF" condition="${ESQUECERAGENCIAECONTA} &gt; 0">
+<kw name="Click Element" library="AppiumLibrary">
+<arg>//android.widget.Button[@text='Olá, Leandro']</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20220215 16:46:48.314" endtime="20220215 16:46:48.314"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>com.itau.investimentos:id/btnLeave</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="NOT RUN" starttime="20220215 16:46:48.314" endtime="20220215 16:46:48.314"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>com.itau.investimentos:id/btnLeave</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20220215 16:46:48.314" endtime="20220215 16:46:48.314"/>
+</kw>
+<status status="NOT RUN" starttime="20220215 16:46:48.314" endtime="20220215 16:46:48.314"/>
+</branch>
+<status status="PASS" starttime="20220215 16:46:48.314" endtime="20220215 16:46:48.314"/>
+</if>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220215 16:46:53.327" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220215 16:46:48.314" endtime="20220215 16:46:53.327"/>
+</kw>
+<kw name="Get Matching Xpath Count" library="AppiumLibrary">
+<var>${NOTIFICACAODEPERMITIR}</var>
+<arg>//android.widget.Button[@text='Permitir']</arg>
+<doc>Returns number of elements matching ``xpath``</doc>
+<msg timestamp="20220215 16:46:53.494" level="INFO">${NOTIFICACAODEPERMITIR} = 1</msg>
+<status status="PASS" starttime="20220215 16:46:53.327" endtime="20220215 16:46:53.494"/>
+</kw>
+<if>
+<branch type="IF" condition="${NOTIFICACAODEPERMITIR} &gt; 0">
+<kw name="Click Element" library="AppiumLibrary">
+<arg>//android.widget.Button[@text='Permitir']</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220215 16:46:53.494" level="INFO">Clicking element '//android.widget.Button[@text='Permitir']'.</msg>
+<status status="PASS" starttime="20220215 16:46:53.494" endtime="20220215 16:46:53.904"/>
+</kw>
+<status status="PASS" starttime="20220215 16:46:53.494" endtime="20220215 16:46:53.904"/>
+</branch>
+<status status="PASS" starttime="20220215 16:46:53.494" endtime="20220215 16:46:53.904"/>
+</if>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>//android.widget.TextView[@text='Já sou cliente Itaú']</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220215 16:46:53.904" endtime="20220215 16:46:55.264"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>//android.widget.TextView[@text='Já sou cliente Itaú']</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220215 16:46:55.266" level="INFO">Clicking element '//android.widget.TextView[@text='Já sou cliente Itaú']'.</msg>
+<status status="PASS" starttime="20220215 16:46:55.264" endtime="20220215 16:46:55.828"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220215 16:47:00.837" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220215 16:46:55.828" endtime="20220215 16:47:00.837"/>
+</kw>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20220215 16:47:03.625" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220215 16:47:00.837" endtime="20220215 16:47:03.625"/>
+</kw>
+<status status="PASS" starttime="20220215 16:46:13.260" endtime="20220215 16:47:03.625"/>
+</kw>
+<kw name="Digitando agencia e conta" library="ResourceAndroidIonVivo">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>//android.view.View[@text='Agência']</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220215 16:47:03.625" endtime="20220215 16:47:04.025"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>//android.view.View[@text='Agência']</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220215 16:47:04.033" level="INFO">Clicking element '//android.view.View[@text='Agência']'.</msg>
+<status status="PASS" starttime="20220215 16:47:04.025" endtime="20220215 16:47:04.419"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220215 16:47:09.422" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220215 16:47:04.419" endtime="20220215 16:47:09.422"/>
+</kw>
+<kw name="Press Keycode" library="AppiumLibrary">
+<arg>11</arg>
+<doc>Sends a press of keycode to the device.</doc>
+<status status="PASS" starttime="20220215 16:47:09.422" endtime="20220215 16:47:09.655"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220215 16:47:12.660" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220215 16:47:09.655" endtime="20220215 16:47:12.660"/>
+</kw>
+<kw name="Press Keycode" library="AppiumLibrary">
+<arg>11</arg>
+<doc>Sends a press of keycode to the device.</doc>
+<status status="PASS" starttime="20220215 16:47:12.660" endtime="20220215 16:47:12.814"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220215 16:47:15.829" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220215 16:47:12.814" endtime="20220215 16:47:15.829"/>
+</kw>
+<kw name="Press Keycode" library="AppiumLibrary">
+<arg>12</arg>
+<doc>Sends a press of keycode to the device.</doc>
+<status status="PASS" starttime="20220215 16:47:15.830" endtime="20220215 16:47:16.000"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220215 16:47:19.002" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220215 16:47:16.000" endtime="20220215 16:47:19.002"/>
+</kw>
+<kw name="Press Keycode" library="AppiumLibrary">
+<arg>7</arg>
+<doc>Sends a press of keycode to the device.</doc>
+<status status="PASS" starttime="20220215 16:47:19.002" endtime="20220215 16:47:19.221"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220215 16:47:22.228" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220215 16:47:19.221" endtime="20220215 16:47:22.228"/>
+</kw>
+<kw name="Press Keycode" library="AppiumLibrary">
+<arg>10</arg>
+<doc>Sends a press of keycode to the device.</doc>
+<status status="PASS" starttime="20220215 16:47:22.228" endtime="20220215 16:47:22.378"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220215 16:47:25.385" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220215 16:47:22.378" endtime="20220215 16:47:25.385"/>
+</kw>
+<kw name="Press Keycode" library="AppiumLibrary">
+<arg>14</arg>
+<doc>Sends a press of keycode to the device.</doc>
+<status status="PASS" starttime="20220215 16:47:25.385" endtime="20220215 16:47:25.618"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220215 16:47:28.626" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220215 16:47:25.618" endtime="20220215 16:47:28.626"/>
+</kw>
+<kw name="Press Keycode" library="AppiumLibrary">
+<arg>11</arg>
+<doc>Sends a press of keycode to the device.</doc>
+<status status="PASS" starttime="20220215 16:47:28.626" endtime="20220215 16:47:28.852"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220215 16:47:31.858" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220215 16:47:28.852" endtime="20220215 16:47:31.858"/>
+</kw>
+<kw name="Press Keycode" library="AppiumLibrary">
+<arg>11</arg>
+<doc>Sends a press of keycode to the device.</doc>
+<status status="PASS" starttime="20220215 16:47:31.858" endtime="20220215 16:47:32.406"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220215 16:47:35.420" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220215 16:47:32.406" endtime="20220215 16:47:35.420"/>
+</kw>
+<kw name="Press Keycode" library="AppiumLibrary">
+<arg>10</arg>
+<doc>Sends a press of keycode to the device.</doc>
+<status status="PASS" starttime="20220215 16:47:35.420" endtime="20220215 16:47:35.571"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220215 16:47:38.579" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220215 16:47:35.571" endtime="20220215 16:47:38.580"/>
+</kw>
+<kw name="Press Keycode" library="AppiumLibrary">
+<arg>13</arg>
+<doc>Sends a press of keycode to the device.</doc>
+<status status="PASS" starttime="20220215 16:47:38.580" endtime="20220215 16:47:38.805"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>7s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220215 16:47:45.819" level="INFO">Slept 7 seconds</msg>
+<status status="PASS" starttime="20220215 16:47:38.805" endtime="20220215 16:47:45.819"/>
+</kw>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20220215 16:47:46.667" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-2.png"&gt;&lt;img src="appium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220215 16:47:45.819" endtime="20220215 16:47:46.667"/>
+</kw>
+<status status="PASS" starttime="20220215 16:47:03.625" endtime="20220215 16:47:46.667"/>
+</kw>
+<kw name="Digitando senha" library="ResourceAndroidIonVivo">
+<kw name="Click Element" library="AppiumLibrary">
+<arg>//android.widget.Button[contains(@text, '1')]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220215 16:47:46.667" level="INFO">Clicking element '//android.widget.Button[contains(@text, '1')]'.</msg>
+<status status="PASS" starttime="20220215 16:47:46.667" endtime="20220215 16:47:47.077"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220215 16:47:49.081" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220215 16:47:47.077" endtime="20220215 16:47:49.081"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>//android.widget.Button[contains(@text, '3')]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220215 16:47:49.081" level="INFO">Clicking element '//android.widget.Button[contains(@text, '3')]'.</msg>
+<status status="PASS" starttime="20220215 16:47:49.081" endtime="20220215 16:47:49.554"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220215 16:47:51.555" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220215 16:47:49.554" endtime="20220215 16:47:51.555"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>//android.widget.Button[contains(@text, '0')]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220215 16:47:51.556" level="INFO">Clicking element '//android.widget.Button[contains(@text, '0')]'.</msg>
+<status status="PASS" starttime="20220215 16:47:51.556" endtime="20220215 16:47:52.025"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220215 16:47:54.033" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220215 16:47:52.025" endtime="20220215 16:47:54.033"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>//android.widget.Button[contains(@text, '5')]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220215 16:47:54.033" level="INFO">Clicking element '//android.widget.Button[contains(@text, '5')]'.</msg>
+<status status="PASS" starttime="20220215 16:47:54.033" endtime="20220215 16:47:54.508"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220215 16:47:56.510" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220215 16:47:54.508" endtime="20220215 16:47:56.510"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>//android.widget.Button[contains(@text, '2')]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220215 16:47:56.510" level="INFO">Clicking element '//android.widget.Button[contains(@text, '2')]'.</msg>
+<status status="PASS" starttime="20220215 16:47:56.510" endtime="20220215 16:47:56.894"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220215 16:47:58.902" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220215 16:47:56.894" endtime="20220215 16:47:58.902"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>//android.widget.Button[contains(@text, '1')]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220215 16:47:58.902" level="INFO">Clicking element '//android.widget.Button[contains(@text, '1')]'.</msg>
+<status status="PASS" starttime="20220215 16:47:58.902" endtime="20220215 16:47:59.335"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220215 16:48:04.338" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220215 16:47:59.335" endtime="20220215 16:48:04.338"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>//android.widget.Button[@text='Entrar']</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220215 16:48:04.338" level="INFO">Clicking element '//android.widget.Button[@text='Entrar']'.</msg>
+<status status="PASS" starttime="20220215 16:48:04.338" endtime="20220215 16:48:04.822"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220215 16:48:14.825" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20220215 16:48:04.822" endtime="20220215 16:48:14.825"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>com.android.permissioncontroller:id/permission_allow_foreground_only_button</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220215 16:48:14.825" endtime="20220215 16:48:15.121"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>com.android.permissioncontroller:id/permission_allow_foreground_only_button</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220215 16:48:15.121" level="INFO">Clicking element 'com.android.permissioncontroller:id/permission_allow_foreground_only_button'.</msg>
+<status status="PASS" starttime="20220215 16:48:15.121" endtime="20220215 16:48:15.501"/>
+</kw>
+<status status="PASS" starttime="20220215 16:47:46.667" endtime="20220215 16:48:15.501"/>
+</kw>
+<kw name="Fechar Stories" library="ResourceAndroidIonVivo">
+<kw name="Get Matching Xpath Count" library="AppiumLibrary">
+<var>${NUMERO}</var>
+<arg>//android.widget.ImageButton[@content-desc="Fechar"]</arg>
+<doc>Returns number of elements matching ``xpath``</doc>
+<msg timestamp="20220215 16:48:25.773" level="INFO">${NUMERO} = 1</msg>
+<status status="PASS" starttime="20220215 16:48:15.501" endtime="20220215 16:48:25.773"/>
+</kw>
+<if>
+<branch type="IF" condition="${NUMERO} &gt; 0">
+<kw name="Click Element" library="AppiumLibrary">
+<arg>//android.widget.ImageButton[@content-desc="Fechar"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220215 16:48:25.782" level="INFO">Clicking element '//android.widget.ImageButton[@content-desc="Fechar"]'.</msg>
+<status status="PASS" starttime="20220215 16:48:25.773" endtime="20220215 16:48:29.985"/>
+</kw>
+<status status="PASS" starttime="20220215 16:48:25.773" endtime="20220215 16:48:29.985"/>
+</branch>
+<status status="PASS" starttime="20220215 16:48:25.773" endtime="20220215 16:48:29.985"/>
+</if>
+<status status="PASS" starttime="20220215 16:48:15.501" endtime="20220215 16:48:29.985"/>
+</kw>
+<kw name="Swipe Up" library="ResourceAndroidIonVivo">
+<kw name="Get Element Size" library="AppiumLibrary">
+<var>${element_size}</var>
+<arg>id=com.itau.investimentos:id/popup_card</arg>
+<doc>Get element size</doc>
+<msg timestamp="20220215 16:48:31.839" level="INFO">Element 'id=com.itau.investimentos:id/popup_card' size: {'height': 130, 'width': 573} </msg>
+<msg timestamp="20220215 16:48:31.839" level="INFO">${element_size} = {'height': 130, 'width': 573}</msg>
+<status status="PASS" starttime="20220215 16:48:29.987" endtime="20220215 16:48:31.839"/>
+</kw>
+<kw name="Get Element Location" library="AppiumLibrary">
+<var>${element_location}</var>
+<arg>id=com.itau.investimentos:id/popup_card</arg>
+<doc>Get element location</doc>
+<msg timestamp="20220215 16:48:32.087" level="INFO">Element 'id=com.itau.investimentos:id/popup_card' location: {'x': 254, 'y': 1910} </msg>
+<msg timestamp="20220215 16:48:32.088" level="INFO">${element_location} = {'x': 254, 'y': 1910}</msg>
+<status status="PASS" starttime="20220215 16:48:31.840" endtime="20220215 16:48:32.088"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${start_x}</var>
+<arg>${element_location['x']} + (${element_size['width']} * 0.5)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220215 16:48:32.091" level="INFO">${start_x} = 540.5</msg>
+<status status="PASS" starttime="20220215 16:48:32.088" endtime="20220215 16:48:32.091"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${start_y}</var>
+<arg>${element_location['y']} + (${element_size['height']} * 0.7)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220215 16:48:32.094" level="INFO">${start_y} = 2001.0</msg>
+<status status="PASS" starttime="20220215 16:48:32.091" endtime="20220215 16:48:32.094"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${end_x}</var>
+<arg>${element_location['x']} + (${element_size['width']} * 0.5)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220215 16:48:32.098" level="INFO">${end_x} = 540.5</msg>
+<status status="PASS" starttime="20220215 16:48:32.094" endtime="20220215 16:48:32.098"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${end_y}</var>
+<arg>${element_location['y']} + (${element_size['height']} * 0.3)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220215 16:48:32.101" level="INFO">${end_y} = 1949.0</msg>
+<status status="PASS" starttime="20220215 16:48:32.099" endtime="20220215 16:48:32.101"/>
+</kw>
+<kw name="Swipe" library="AppiumLibrary">
+<arg>${start_x}</arg>
+<arg>${start_y}</arg>
+<arg>${end_x}</arg>
+<arg>${end_y}</arg>
+<arg>500</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" starttime="20220215 16:48:32.102" endtime="20220215 16:48:33.244"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220215 16:48:36.246" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220215 16:48:33.244" endtime="20220215 16:48:36.246"/>
+</kw>
+<status status="PASS" starttime="20220215 16:48:29.986" endtime="20220215 16:48:36.246"/>
+</kw>
+<kw name="Validar elemento na tela de login" library="ResourceAndroidIonVivo">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>//android.view.View[@content-desc="Perfil"]</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220215 16:48:36.247" endtime="20220215 16:48:36.655"/>
+</kw>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20220215 16:48:37.402" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-3.png"&gt;&lt;img src="appium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220215 16:48:36.655" endtime="20220215 16:48:37.402"/>
+</kw>
+<status status="PASS" starttime="20220215 16:48:36.247" endtime="20220215 16:48:37.403"/>
+</kw>
+<status status="PASS" starttime="20220215 16:46:06.103" endtime="20220215 16:48:37.404"/>
+</test>
+<test id="s1-t2" name="Caso de teste 02:Status">
+<kw name="Clicar e validar stories" library="ResourceAndroidIonVivo">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>com.itau.investimentos:id/ibStoriesButton</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220215 16:48:37.408" endtime="20220215 16:48:37.803"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>com.itau.investimentos:id/ibStoriesButton</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220215 16:48:37.808" level="INFO">Clicking element 'com.itau.investimentos:id/ibStoriesButton'.</msg>
+<status status="PASS" starttime="20220215 16:48:37.804" endtime="20220215 16:48:38.800"/>
+</kw>
+<kw name="Get Matching Xpath Count" library="AppiumLibrary">
+<var>${STORIES}</var>
+<arg>//android.widget.ImageButton[@content-desc="Fechar"]</arg>
+<doc>Returns number of elements matching ``xpath``</doc>
+<msg timestamp="20220215 16:48:39.107" level="INFO">${STORIES} = 1</msg>
+<status status="PASS" starttime="20220215 16:48:38.800" endtime="20220215 16:48:39.107"/>
+</kw>
+<if>
+<branch type="IF" condition="${STORIES} &gt; 0">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>com.itau.investimentos:id/ionProgressStories</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220215 16:48:39.108" endtime="20220215 16:48:53.588"/>
+</kw>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20220215 16:48:58.604" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-4.png"&gt;&lt;img src="appium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220215 16:48:53.588" endtime="20220215 16:48:58.605"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>//android.widget.ImageButton[@content-desc="Fechar"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220215 16:48:58.605" level="INFO">Clicking element '//android.widget.ImageButton[@content-desc="Fechar"]'.</msg>
+<status status="PASS" starttime="20220215 16:48:58.605" endtime="20220215 16:49:08.981"/>
+</kw>
+<status status="PASS" starttime="20220215 16:48:39.107" endtime="20220215 16:49:08.981"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" library="BuiltIn">
+<arg>Stories fechou antes de validar</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20220215 16:49:08.981" endtime="20220215 16:49:08.981"/>
+</kw>
+<status status="NOT RUN" starttime="20220215 16:49:08.981" endtime="20220215 16:49:08.981"/>
+</branch>
+<status status="PASS" starttime="20220215 16:48:39.107" endtime="20220215 16:49:08.981"/>
+</if>
+<status status="PASS" starttime="20220215 16:48:37.407" endtime="20220215 16:49:08.981"/>
+</kw>
+<kw name="Swipe Up" library="ResourceAndroidIonVivo">
+<kw name="Get Element Size" library="AppiumLibrary">
+<var>${element_size}</var>
+<arg>id=com.itau.investimentos:id/popup_card</arg>
+<doc>Get element size</doc>
+<msg timestamp="20220215 16:49:10.157" level="INFO">Element 'id=com.itau.investimentos:id/popup_card' size: {'height': 109, 'width': 573} </msg>
+<msg timestamp="20220215 16:49:10.157" level="INFO">${element_size} = {'height': 109, 'width': 573}</msg>
+<status status="PASS" starttime="20220215 16:49:08.982" endtime="20220215 16:49:10.157"/>
+</kw>
+<kw name="Get Element Location" library="AppiumLibrary">
+<var>${element_location}</var>
+<arg>id=com.itau.investimentos:id/popup_card</arg>
+<doc>Get element location</doc>
+<msg timestamp="20220215 16:49:10.417" level="INFO">Element 'id=com.itau.investimentos:id/popup_card' location: {'x': 254, 'y': 1931} </msg>
+<msg timestamp="20220215 16:49:10.417" level="INFO">${element_location} = {'x': 254, 'y': 1931}</msg>
+<status status="PASS" starttime="20220215 16:49:10.158" endtime="20220215 16:49:10.417"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${start_x}</var>
+<arg>${element_location['x']} + (${element_size['width']} * 0.5)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220215 16:49:10.418" level="INFO">${start_x} = 540.5</msg>
+<status status="PASS" starttime="20220215 16:49:10.417" endtime="20220215 16:49:10.418"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${start_y}</var>
+<arg>${element_location['y']} + (${element_size['height']} * 0.7)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220215 16:49:10.418" level="INFO">${start_y} = 2007.3</msg>
+<status status="PASS" starttime="20220215 16:49:10.418" endtime="20220215 16:49:10.418"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${end_x}</var>
+<arg>${element_location['x']} + (${element_size['width']} * 0.5)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220215 16:49:10.419" level="INFO">${end_x} = 540.5</msg>
+<status status="PASS" starttime="20220215 16:49:10.419" endtime="20220215 16:49:10.419"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${end_y}</var>
+<arg>${element_location['y']} + (${element_size['height']} * 0.3)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220215 16:49:10.420" level="INFO">${end_y} = 1963.7</msg>
+<status status="PASS" starttime="20220215 16:49:10.419" endtime="20220215 16:49:10.420"/>
+</kw>
+<kw name="Swipe" library="AppiumLibrary">
+<arg>${start_x}</arg>
+<arg>${start_y}</arg>
+<arg>${end_x}</arg>
+<arg>${end_y}</arg>
+<arg>500</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" starttime="20220215 16:49:10.420" endtime="20220215 16:49:11.542"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220215 16:49:14.547" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220215 16:49:11.543" endtime="20220215 16:49:14.547"/>
+</kw>
+<status status="PASS" starttime="20220215 16:49:08.981" endtime="20220215 16:49:14.547"/>
+</kw>
+<kw name="Validar elemento na saida dos Stories" library="ResourceAndroidIonVivo">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>com.itau.investimentos:id/ibStoriesButton</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220215 16:49:14.548" endtime="20220215 16:49:14.892"/>
+</kw>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20220215 16:49:15.754" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-5.png"&gt;&lt;img src="appium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220215 16:49:14.892" endtime="20220215 16:49:15.754"/>
+</kw>
+<status status="PASS" starttime="20220215 16:49:14.548" endtime="20220215 16:49:15.754"/>
+</kw>
+<status status="PASS" starttime="20220215 16:48:37.406" endtime="20220215 16:49:15.755"/>
+</test>
+<test id="s1-t3" name="Caso de teste 03:Home">
+<kw name="Validar tela home e saldo" library="ResourceAndroidIonVivo">
+<kw name="Get Matching Xpath Count" library="AppiumLibrary">
+<var>${SALDO}</var>
+<arg>//android.widget.Button[@content-desc="Exibir valores"]</arg>
+<doc>Returns number of elements matching ``xpath``</doc>
+<msg timestamp="20220215 16:49:16.023" level="INFO">${SALDO} = 0</msg>
+<status status="PASS" starttime="20220215 16:49:15.756" endtime="20220215 16:49:16.023"/>
+</kw>
+<if>
+<branch type="IF" condition="${SALDO} &gt; 0">
+<kw name="Click Element" library="AppiumLibrary">
+<arg>//android.widget.Button[@content-desc="Exibir valores"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20220215 16:49:16.024" endtime="20220215 16:49:16.024"/>
+</kw>
+<status status="NOT RUN" starttime="20220215 16:49:16.023" endtime="20220215 16:49:16.024"/>
+</branch>
+<status status="PASS" starttime="20220215 16:49:16.023" endtime="20220215 16:49:16.024"/>
+</if>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>com.itau.investimentos:id/tv_header_total_value_invested</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220215 16:49:16.024" endtime="20220215 16:49:16.357"/>
+</kw>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20220215 16:49:17.391" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-6.png"&gt;&lt;img src="appium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220215 16:49:16.357" endtime="20220215 16:49:17.391"/>
+</kw>
+<status status="PASS" starttime="20220215 16:49:15.756" endtime="20220215 16:49:17.391"/>
+</kw>
+<status status="PASS" starttime="20220215 16:49:15.755" endtime="20220215 16:49:17.391"/>
+</test>
+<test id="s1-t4" name="Caso de teste 04:Rentabilidade">
+<kw name="Swipe Left" library="ResourceAndroidIonVivo">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>id=com.itau.investimentos:id/tv_header_total_value_invested</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220215 16:49:17.393" endtime="20220215 16:49:17.741"/>
+</kw>
+<kw name="Get Element Size" library="AppiumLibrary">
+<var>${element_size}</var>
+<arg>id=com.itau.investimentos:id/tv_header_total_value_invested</arg>
+<doc>Get element size</doc>
+<msg timestamp="20220215 16:49:18.120" level="INFO">Element 'id=com.itau.investimentos:id/tv_header_total_value_invested' size: {'height': 103, 'width': 304} </msg>
+<msg timestamp="20220215 16:49:18.120" level="INFO">${element_size} = {'height': 103, 'width': 304}</msg>
+<status status="PASS" starttime="20220215 16:49:17.741" endtime="20220215 16:49:18.120"/>
+</kw>
+<kw name="Get Element Location" library="AppiumLibrary">
+<var>${element_location}</var>
+<arg>id=com.itau.investimentos:id/tv_header_total_value_invested</arg>
+<doc>Get element location</doc>
+<msg timestamp="20220215 16:49:18.489" level="INFO">Element 'id=com.itau.investimentos:id/tv_header_total_value_invested' location: {'x': 66, 'y': 775} </msg>
+<msg timestamp="20220215 16:49:18.489" level="INFO">${element_location} = {'x': 66, 'y': 775}</msg>
+<status status="PASS" starttime="20220215 16:49:18.121" endtime="20220215 16:49:18.489"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${start_x}</var>
+<arg>${element_location['x']} + (${element_size['width']} * 1)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220215 16:49:18.491" level="INFO">${start_x} = 370</msg>
+<status status="PASS" starttime="20220215 16:49:18.489" endtime="20220215 16:49:18.491"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${start_y}</var>
+<arg>${element_location['y']} + (${element_size['height']} * 0.1)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220215 16:49:18.492" level="INFO">${start_y} = 785.3</msg>
+<status status="PASS" starttime="20220215 16:49:18.491" endtime="20220215 16:49:18.492"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${end_x}</var>
+<arg>${element_location['x']} + (${element_size['width']} * 0.1)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220215 16:49:18.493" level="INFO">${end_x} = 96.4</msg>
+<status status="PASS" starttime="20220215 16:49:18.492" endtime="20220215 16:49:18.493"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${end_y}</var>
+<arg>${element_location['y']} + (${element_size['height']} * 0.1)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220215 16:49:18.494" level="INFO">${end_y} = 785.3</msg>
+<status status="PASS" starttime="20220215 16:49:18.493" endtime="20220215 16:49:18.494"/>
+</kw>
+<kw name="Swipe" library="AppiumLibrary">
+<arg>${start_x}</arg>
+<arg>${start_y}</arg>
+<arg>${end_x}</arg>
+<arg>${end_y}</arg>
+<arg>1500</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" starttime="20220215 16:49:18.494" endtime="20220215 16:49:20.121"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220215 16:49:25.131" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220215 16:49:20.121" endtime="20220215 16:49:25.131"/>
+</kw>
+<status status="PASS" starttime="20220215 16:49:17.393" endtime="20220215 16:49:25.131"/>
+</kw>
+<kw name="Validar tela de rentabilidade" library="ResourceAndroidIonVivo">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>com.itau.investimentos:id/tvPeriodBenchmarkTitle</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220215 16:49:25.132" endtime="20220215 16:49:25.461"/>
+</kw>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20220215 16:49:26.651" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-7.png"&gt;&lt;img src="appium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220215 16:49:25.461" endtime="20220215 16:49:26.651"/>
+</kw>
+<status status="PASS" starttime="20220215 16:49:25.132" endtime="20220215 16:49:26.651"/>
+</kw>
+<status status="PASS" starttime="20220215 16:49:17.393" endtime="20220215 16:49:26.651"/>
+</test>
+<test id="s1-t5" name="Caso de teste 05:Carteira">
+<kw name="Swipe Right" library="ResourceAndroidIonVivo">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>id=com.itau.investimentos:id/tvPeriodBenchmarkTitle</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220215 16:49:26.653" endtime="20220215 16:49:26.997"/>
+</kw>
+<kw name="Get Element Size" library="AppiumLibrary">
+<var>${element_size}</var>
+<arg>id=com.itau.investimentos:id/tvPeriodBenchmarkTitle</arg>
+<doc>Get element size</doc>
+<msg timestamp="20220215 16:49:27.308" level="INFO">Element 'id=com.itau.investimentos:id/tvPeriodBenchmarkTitle' size: {'height': 81, 'width': 263} </msg>
+<msg timestamp="20220215 16:49:27.308" level="INFO">${element_size} = {'height': 81, 'width': 263}</msg>
+<status status="PASS" starttime="20220215 16:49:26.997" endtime="20220215 16:49:27.308"/>
+</kw>
+<kw name="Get Element Location" library="AppiumLibrary">
+<var>${element_location}</var>
+<arg>id=com.itau.investimentos:id/tvPeriodBenchmarkTitle</arg>
+<doc>Get element location</doc>
+<msg timestamp="20220215 16:49:27.644" level="INFO">Element 'id=com.itau.investimentos:id/tvPeriodBenchmarkTitle' location: {'x': 132, 'y': 1317} </msg>
+<msg timestamp="20220215 16:49:27.644" level="INFO">${element_location} = {'x': 132, 'y': 1317}</msg>
+<status status="PASS" starttime="20220215 16:49:27.309" endtime="20220215 16:49:27.644"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${start_x}</var>
+<arg>${element_location['x']} + (${element_size['width']} * 0.1)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220215 16:49:27.645" level="INFO">${start_x} = 158.3</msg>
+<status status="PASS" starttime="20220215 16:49:27.644" endtime="20220215 16:49:27.645"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${start_y}</var>
+<arg>${element_location['y']} + (${element_size['height']} * 0.1)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220215 16:49:27.646" level="INFO">${start_y} = 1325.1</msg>
+<status status="PASS" starttime="20220215 16:49:27.645" endtime="20220215 16:49:27.646"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${end_x}</var>
+<arg>${element_location['x']} + (${element_size['width']} * 1)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220215 16:49:27.646" level="INFO">${end_x} = 395</msg>
+<status status="PASS" starttime="20220215 16:49:27.646" endtime="20220215 16:49:27.646"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${end_y}</var>
+<arg>${element_location['y']} + (${element_size['height']} * 0.1)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220215 16:49:27.647" level="INFO">${end_y} = 1325.1</msg>
+<status status="PASS" starttime="20220215 16:49:27.646" endtime="20220215 16:49:27.647"/>
+</kw>
+<kw name="Swipe" library="AppiumLibrary">
+<arg>${start_x}</arg>
+<arg>${start_y}</arg>
+<arg>${end_x}</arg>
+<arg>${end_y}</arg>
+<arg>1500</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" starttime="20220215 16:49:27.647" endtime="20220215 16:49:29.279"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220215 16:49:34.281" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220215 16:49:29.279" endtime="20220215 16:49:34.281"/>
+</kw>
+<status status="PASS" starttime="20220215 16:49:26.653" endtime="20220215 16:49:34.281"/>
+</kw>
+<kw name="Valida elemnto na tela principal" library="ResourceAndroidIonVivo">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>com.itau.investimentos:id/tv_header_total_value_invested</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220215 16:49:34.282" endtime="20220215 16:49:34.652"/>
+</kw>
+<status status="PASS" starttime="20220215 16:49:34.282" endtime="20220215 16:49:34.652"/>
+</kw>
+<kw name="Swipe Down" library="ResourceAndroidIonVivo">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>id=com.itau.investimentos:id/tv_portfolio_profitability_percent_description</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220215 16:49:34.653" endtime="20220215 16:49:35.039"/>
+</kw>
+<kw name="Get Element Size" library="AppiumLibrary">
+<var>${element_size}</var>
+<arg>id=com.itau.investimentos:id/tv_portfolio_profitability_percent_description</arg>
+<doc>Get element size</doc>
+<msg timestamp="20220215 16:49:35.421" level="INFO">Element 'id=com.itau.investimentos:id/tv_portfolio_profitability_percent_description' size: {'height': 55, 'width': 799} </msg>
+<msg timestamp="20220215 16:49:35.421" level="INFO">${element_size} = {'height': 55, 'width': 799}</msg>
+<status status="PASS" starttime="20220215 16:49:35.039" endtime="20220215 16:49:35.421"/>
+</kw>
+<kw name="Get Element Location" library="AppiumLibrary">
+<var>${element_location}</var>
+<arg>id=com.itau.investimentos:id/tv_portfolio_profitability_percent_description</arg>
+<doc>Get element location</doc>
+<msg timestamp="20220215 16:49:35.767" level="INFO">Element 'id=com.itau.investimentos:id/tv_portfolio_profitability_percent_description' location: {'x': 79, 'y': 1204} </msg>
+<msg timestamp="20220215 16:49:35.767" level="INFO">${element_location} = {'x': 79, 'y': 1204}</msg>
+<status status="PASS" starttime="20220215 16:49:35.421" endtime="20220215 16:49:35.767"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${start_x}</var>
+<arg>${element_location['x']} + (${element_size['width']} * 0.5)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220215 16:49:35.768" level="INFO">${start_x} = 478.5</msg>
+<status status="PASS" starttime="20220215 16:49:35.767" endtime="20220215 16:49:35.768"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${start_y}</var>
+<arg>${element_location['y']} + (${element_size['height']} * 0.3)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220215 16:49:35.769" level="INFO">${start_y} = 1220.5</msg>
+<status status="PASS" starttime="20220215 16:49:35.768" endtime="20220215 16:49:35.769"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${end_x}</var>
+<arg>${element_location['x']} + (${element_size['width']} * 0.5)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220215 16:49:35.770" level="INFO">${end_x} = 478.5</msg>
+<status status="PASS" starttime="20220215 16:49:35.769" endtime="20220215 16:49:35.770"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${end_y}</var>
+<arg>${element_location['y']} + (${element_size['height']} * 0.7)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220215 16:49:35.770" level="INFO">${end_y} = 1242.5</msg>
+<status status="PASS" starttime="20220215 16:49:35.770" endtime="20220215 16:49:35.770"/>
+</kw>
+<kw name="Swipe" library="AppiumLibrary">
+<arg>${start_x}</arg>
+<arg>${start_y}</arg>
+<arg>${end_x}</arg>
+<arg>${end_y}</arg>
+<arg>500</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" starttime="20220215 16:49:35.770" endtime="20220215 16:49:36.933"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220215 16:49:41.943" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220215 16:49:36.933" endtime="20220215 16:49:41.943"/>
+</kw>
+<status status="PASS" starttime="20220215 16:49:34.653" endtime="20220215 16:49:41.943"/>
+</kw>
+<kw name="Clicar em todos os produtos" library="ResourceAndroidIonVivo">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>//android.widget.TextView[@content-desc="investido em Todos os produtos"]</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220215 16:49:41.944" endtime="20220215 16:49:42.384"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>//android.widget.TextView[@content-desc="investido em Todos os produtos"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220215 16:49:42.385" level="INFO">Clicking element '//android.widget.TextView[@content-desc="investido em Todos os produtos"]'.</msg>
+<status status="PASS" starttime="20220215 16:49:42.384" endtime="20220215 16:49:43.623"/>
+</kw>
+<status status="PASS" starttime="20220215 16:49:41.944" endtime="20220215 16:49:43.623"/>
+</kw>
+<kw name="Validar tela da carteira" library="ResourceAndroidIonVivo">
+<kw name="Sleep" library="BuiltIn">
+<arg>6s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220215 16:49:49.635" level="INFO">Slept 6 seconds</msg>
+<status status="PASS" starttime="20220215 16:49:43.624" endtime="20220215 16:49:49.635"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>com.itau.investimentos:id/tvPortfolioPercent</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220215 16:49:49.635" endtime="20220215 16:49:49.956"/>
+</kw>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20220215 16:49:50.693" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-8.png"&gt;&lt;img src="appium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220215 16:49:49.956" endtime="20220215 16:49:50.693"/>
+</kw>
+<status status="PASS" starttime="20220215 16:49:43.624" endtime="20220215 16:49:50.693"/>
+</kw>
+<status status="PASS" starttime="20220215 16:49:26.653" endtime="20220215 16:49:50.694"/>
+</test>
+<test id="s1-t6" name="Caso de teste 06:Sair">
+<kw name="fechar cenario carteira" library="ResourceAndroidIonVivo">
+<kw name="Get Matching Xpath Count" library="AppiumLibrary">
+<var>${FECHARCART}</var>
+<arg>//android.widget.ImageButton[@content-desc="Fechar"]</arg>
+<doc>Returns number of elements matching ``xpath``</doc>
+<msg timestamp="20220215 16:49:50.921" level="INFO">${FECHARCART} = 1</msg>
+<status status="PASS" starttime="20220215 16:49:50.696" endtime="20220215 16:49:50.921"/>
+</kw>
+<if>
+<branch type="IF" condition="${FECHARCART} &gt; 0">
+<kw name="Click Element" library="AppiumLibrary">
+<arg>//android.widget.ImageButton[@content-desc="Fechar"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220215 16:49:50.922" level="INFO">Clicking element '//android.widget.ImageButton[@content-desc="Fechar"]'.</msg>
+<status status="PASS" starttime="20220215 16:49:50.921" endtime="20220215 16:49:52.803"/>
+</kw>
+<status status="PASS" starttime="20220215 16:49:50.921" endtime="20220215 16:49:52.803"/>
+</branch>
+<status status="PASS" starttime="20220215 16:49:50.921" endtime="20220215 16:49:52.803"/>
+</if>
+<status status="PASS" starttime="20220215 16:49:50.695" endtime="20220215 16:49:52.803"/>
+</kw>
+<kw name="Clicar no perfil" library="ResourceAndroidIonVivo">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>//android.view.View[@content-desc="Perfil"]</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220215 16:49:52.804" endtime="20220215 16:49:53.234"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>//android.view.View[@content-desc="Perfil"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220215 16:49:53.236" level="INFO">Clicking element '//android.view.View[@content-desc="Perfil"]'.</msg>
+<status status="PASS" starttime="20220215 16:49:53.234" endtime="20220215 16:49:55.257"/>
+</kw>
+<status status="PASS" starttime="20220215 16:49:52.804" endtime="20220215 16:49:55.258"/>
+</kw>
+<kw name="Clicar em sair" library="ResourceAndroidIonVivo">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>com.itau.investimentos:id/btnLogout</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220215 16:49:55.259" endtime="20220215 16:49:56.629"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>com.itau.investimentos:id/btnLogout</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220215 16:49:56.632" level="INFO">Clicking element 'com.itau.investimentos:id/btnLogout'.</msg>
+<status status="PASS" starttime="20220215 16:49:56.629" endtime="20220215 16:49:57.002"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>com.itau.investimentos:id/btLogout</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220215 16:49:57.002" endtime="20220215 16:49:57.834"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>com.itau.investimentos:id/btLogout</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220215 16:49:57.836" level="INFO">Clicking element 'com.itau.investimentos:id/btLogout'.</msg>
+<status status="PASS" starttime="20220215 16:49:57.835" endtime="20220215 16:49:58.292"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>com.itau.investimentos:id/btnLogoutAndDontRemember</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220215 16:49:58.292" endtime="20220215 16:49:59.144"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>com.itau.investimentos:id/btnLogoutAndDontRemember</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220215 16:49:59.145" level="INFO">Clicking element 'com.itau.investimentos:id/btnLogoutAndDontRemember'.</msg>
+<status status="PASS" starttime="20220215 16:49:59.144" endtime="20220215 16:49:59.437"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220215 16:50:04.444" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220215 16:49:59.438" endtime="20220215 16:50:04.444"/>
+</kw>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20220215 16:50:07.212" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-9.png"&gt;&lt;img src="appium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220215 16:50:04.444" endtime="20220215 16:50:07.212"/>
+</kw>
+<status status="PASS" starttime="20220215 16:49:55.258" endtime="20220215 16:50:07.212"/>
+</kw>
+<status status="PASS" starttime="20220215 16:49:50.695" endtime="20220215 16:50:07.213"/>
+</test>
+<test id="s1-t7" name="Fechar aplicativo">
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20220215 16:50:07.214" endtime="20220215 16:50:07.670"/>
+</kw>
+<status status="PASS" starttime="20220215 16:50:07.214" endtime="20220215 16:50:07.671"/>
+</test>
+<status status="PASS" starttime="20220215 16:46:05.939" endtime="20220215 16:50:07.675"/>
+</suite>
+<statistics>
+<total>
+<stat pass="7" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="7" fail="0" skip="0" id="s1" name="AndroidIonVivo">AndroidIonVivo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
